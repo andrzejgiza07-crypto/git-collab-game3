@@ -72,14 +72,20 @@ function pokazPomoc() {
 const gra = {
 
   // Metoda start rozpoczyna nową grę.
-  start() {
+  start(level) {
     stanGry = nowyStan();
+    if(level=="latwy"){
+    stanGry.energia=15;}
+    if(level=="normalny"){
+    stanGry.energia=14;}
+    if(level=="trudny"){
+    stanGry.energia=12;}
     // Resetujemy stan gry do wartości początkowych.
 
     console.log("UCIECZKA Z SERWEROWNI.");
     // Wyświetlamy tytuł gry.
 
-    console.log("Masz " + MAKS_ENERGIA + " jednostek energii.");
+    console.log("Masz " + stanGry.energia + " jednostek energii.");
     // Informujemy gracza o początkowej energii.
     // MAKS_ENERGIA pochodzi z engine.js.
 
@@ -304,5 +310,5 @@ const gra = {
 };
 
 // Ten komunikat pojawia się po załadowaniu app.js.
-console.log("Gra gotowa. Wpisz gra.start(), aby rozpocząć.");
+console.log("Gra gotowa. Wpisz gra.start(level)), aby rozpocząć. Level: latwy, normalny, trudny");
 // Informujemy gracza, że aplikacja jest gotowa do użycia.
