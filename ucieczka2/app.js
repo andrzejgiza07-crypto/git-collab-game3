@@ -236,7 +236,7 @@ const gra = {
     // eksportujStan() zamienia stan gry na tekst JSON.
     // Wynik zapisujemy w zmiennej tekst.
 
-    console.log("Skopiuj poniższy tekst do pliku, np. zapis.json:");
+    console.log("Skopiuj poniższy tekst do pliku, np. zapis.json:, składnia polecenia gra.import(JSON.stringify(tutaj wklej))");
     // Informujemy gracza, co zrobić z zapisem.
 
     console.log(tekst);
